@@ -53,7 +53,7 @@ MAIN_MENU() {
     CUSTOMER_ID=$($PSQL "SELECT customer_id FROM customers WHERE phone='$CUSTOMER_PHONE'")
     INSERT_APPOINTMENT_RESULT=$($PSQL "INSERT INTO appointments(customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME')")
     echo -e "\nTurno agendado para  $SERVICE_NAME_FORMATTED con fecha  $SERVICE_TIME, $CUSTOMER_NAME_FORMATTED."
-
+ 
   fi
 
 }
